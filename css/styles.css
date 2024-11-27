@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+:root{
+    --knewave: "Knewave", system-ui;
+    --dynapuff: "DynaPuff", system-ui;
+}
+body{
+    margin: 0;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
+/*Welcome Section (header+video)*/
+.welcomeSection{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+#video{
+    width: 100%;
+    height: auto;
+}
+.seeMoreContainer{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);/*Absolute centering ->https://medium.com/front-end-weekly/absolute-centering-in-css-ea3a9d0ad72e */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.seeMoreButton{
+    width: 100%;
+    height: 50px;
+    background-color: #140642;
+    background-image: linear-gradient(to right,#00d4bb,#00adbd); /*https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_ltr*/
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    font-family: var(--dynapuff);
+    color: white;
+}
+.welcomeImage{ 
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.filter{
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+.header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    z-index: 3;
+    background-color: #00adbd;
+}
+.headerTab{
+    color: white;
+    font-size: 1.8em;
+    font-family: var(--knewave);
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.headerTab:hover{
+    background-color: #0197a5;
+}
+.separator{
+    height: 80px;
+    width: 100%;
+    background-color: #140642;
+    background-image: linear-gradient(to right,#140642,#070314); /*https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_ltr*/
+}
+/*Presentation Section*/
+.teamPresentationSection, .gamePresentatoinSection{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    background-color: white;
+}
+h1{
+    font-family: var(--dynapuff);
+    font-size: 3em;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+.memberPresentationContainer, .designPresentationContainer{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.memberImage{
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+}
+.memberDescriptionContainer, .designDescription{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.memberDescriptionContainer > h2, .designDescription > h2, .subDesignDescription > h2{
+    font-family: var(--dynapuff);
+    font-size: 2em;
+}
+.memberDescriptionContainer > p, .designDescription > p, .subDesignDescription > p{
+    font-family: var(--dynapuff);
+    font-size: 1em;
+    text-align: justify;
+}
+/*Game Presentation Section*/
+.designImage{
+    width: 25%;
+    height: auto;
+    border-radius: 5%;
+}
+.subDesignImage{
+    width: 15%;
+    height: auto;
+    border-radius: 5%;
+    margin-right: 30px;
+    margin-left: 40px;
+}
+.multipleDesignPresentationContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px;
+}
+.subDesignPresentationContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.subDesignDescription{
+    margin: 2%;
+    width: 85%;
+}
+.subDesignDescription > h2{
+    font-size: 1.6em;
+}
+.subDesignDescription > p{
+    font-size: 1em;
+}
+/*About Section*/
+.aboutSection{
+    display: flex;
+    flex-direction: column;
+}
+.aboutSection > p{
+    text-align: center;
+    font-family: var(--dynapuff);
+    font-size: 1.2em;
+    margin: 5%;
+}
+.bonusImg{
+    width: 500px;
+}
+@media screen and (max-width:760px) {
+    .header{
+        height: 30px;
+    }
+    .headerTab{
+        font-size: 0.8em;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .memberImage{
+        width: 50%;
+    }
+    .seeMoreButton{
+        height: 25px;
+        font-size: 1em;
+    }
+    .welcomeImage{ 
+        width: 100px;
+        margin-bottom: 20px;
+    }
+    .memberDescriptionContainer, .designDescription{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .memberDescriptionContainer > h2, .designDescription > h2, .subDesignDescription > h2{
+        font-size: 1.1em;
+    }
+    .memberDescriptionContainer > p, .designDescription > p, .subDesignDescription > p{
+        font-size: 0.5em;
+        text-align: justify;
+    }
+    h1{
+        font-size: 1.5em;
+        text-underline-offset: 3px;
+    }
+    .aboutSection > p{
+        font-size: 0.7em;
+    }
+    .designImage{
+        width: 40%;
+    }
+    .subDesignImage{
+        width: 30%;
+        margin-right: 15px;
+        margin-left: 20px;
+    }
+}
+.test{
+    border: dotted red;
+}
+.test2{
+    border: dotted green;
+}
